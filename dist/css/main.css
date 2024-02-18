@@ -115,10 +115,10 @@ a:visited {
   border-bottom-right-radius: 5px;
   overflow: hidden;
   position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease;
   overflow: hidden;
   transform: scale(0);
   opacity: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .navbar__list::before {
   content: "";
@@ -138,10 +138,48 @@ a:visited {
   padding: 0.1875rem 0.625rem;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--yellow-light-2) 50%);
   background-size: 240%;
-  transition: all 0.4s;
+  transition: background-position 0.3s cubic-bezier(0.65, 0, 1, 1);
 }
 .navbar__link:hover, .navbar__link:active {
   background-position: 100%;
+}
+.navbar__label:hover .navbar__icon::before {
+  top: -0.43rem;
+}
+.navbar__label:hover .navbar__icon::after {
+  top: 0.43rem;
+}
+.navbar__checkbox:checked ~ .navbar__label {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.navbar__checkbox:checked + .navbar__label .navbar__icon {
+  background-color: transparent;
+}
+.navbar__checkbox:checked ~ .navbar__nav .navbar__list {
+  opacity: 1;
+  transform: scale(1);
+}
+.navbar__checkbox:checked + .navbar__label .navbar__icon::before, .navbar__checkbox:checked + .navbar__label .navbar__icon::after {
+  top: 0;
+  left: 0;
+  background-color: var(--red-primary);
+  width: 1.5rem;
+}
+.navbar__checkbox:checked + .navbar__label .navbar__icon::before {
+  transform: rotate(135deg) translateX(0);
+}
+.navbar__checkbox:checked + .navbar__label .navbar__icon::after {
+  transform: rotate(-135deg) translateX(0);
+}
+.navbar__checkbox:checked + .navbar__label:hover .navbar__icon::after, .navbar__checkbox:checked + .navbar__label:hover .navbar__icon::before {
+  background-color: var(--red-dark);
+}
+.navbar__checkbox:checked + .navbar__label:hover .navbar__icon::after {
+  transform: rotate(-135deg) scale(0.9);
+}
+.navbar__checkbox:checked + .navbar__label:hover .navbar__icon::before {
+  transform: rotate(135deg) scale(0.9);
 }
 
 /*# sourceMappingURL=main.css.map */

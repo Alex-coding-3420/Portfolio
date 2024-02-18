@@ -1,5 +1,6 @@
 .navbar {
-  // 1. BASIC NAVBAR STYLES
+  // 1. BASIC NAVBAR STYLES ///////////////////////////////////////////////
+  //----------------------------------//
   // checkbox
   &__checkbox {
     display: none;
@@ -81,10 +82,10 @@
     border-bottom-right-radius: 5px;
     overflow: hidden;
     position: relative;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     overflow: hidden;
     transform: scale(0);
     opacity: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
 
     // Create blur background for navbar
     &::before {
@@ -120,12 +121,69 @@
         var(--yellow-light-2) 50%
       );
       background-size: 240%;
-      transition: all 0.4s;
+      transition: background-position 0.3s cubic-bezier(0.65, 0, 1, 1);
     }
 
     &:hover,
     &:active {
       background-position: 100%;
     }
+  }
+  // 2. FUNCTIONALITY //////////////////////////////////////////////////////
+  //----------------------------------//
+  // label:hover
+  &__label:hover &__icon::before {
+    top: -0.43rem;
+  }
+
+  &__label:hover &__icon::after {
+    top: 0.43rem;
+  }
+
+  // checkbox:checked //
+  //remove the right side border radius of label
+  &__checkbox:checked ~ &__label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  // make icon background transparent
+  &__checkbox:checked + &__label &__icon {
+    background-color: transparent;
+  }
+
+  //   Display navbar
+  &__checkbox:checked ~ &__nav &__list {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  // position icon:before and icon:after default position and rotate them to form
+  // a closing icon
+  &__checkbox:checked + &__label &__icon::before,
+  &__checkbox:checked + &__label &__icon::after {
+    top: 0;
+    left: 0;
+    background-color: var(--red-primary);
+    width: 1.5rem;
+  }
+  &__checkbox:checked + &__label &__icon::before {
+    transform: rotate(135deg) translateX(0);
+  }
+  &__checkbox:checked + &__label &__icon::after {
+    transform: rotate(-135deg) translateX(0);
+  }
+
+  // When hovering over the label, change the background color of the closing icon
+  // and scale it down
+  &__checkbox:checked + &__label:hover &__icon::after,
+  &__checkbox:checked + &__label:hover &__icon::before {
+    background-color: var(--red-dark);
+  }
+  &__checkbox:checked + &__label:hover &__icon::after {
+    transform: rotate(-135deg) scale(0.9);
+  }
+  &__checkbox:checked + &__label:hover &__icon::before {
+    transform: rotate(135deg) scale(0.9);
   }
 }
