@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.heading-tertiary {
+  font-size: rem(64px);
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 2px;
+  &-sp {
+    &:first-child {
+      display: block;
+    }
+  }
+}

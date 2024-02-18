@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+@function rem($size) {
+  $remSize: math.div($size, 16px);
+  @return #{$remSize}rem;
+}
+// COLORS //////////////////////////////////////////////////////
+// YELLOW
+@function yellowPrimaryRgba($alpha) {
+  @return rgba(227, 178, 60, $alpha);
+}
+
+@function yellowDarkRgba($alpha) {
+  @return rgba(229, 124, 4, $alpha);
+}
+
+@function yellowLight1Rgba($alpha) {
+  @return rgba(249, 240, 216, $alpha);
+}
+
+@function yellowLight2Rgba($alpha) {
+  @return rgba(244, 224, 177, $alpha);
+}
+
+// WHITE
+@function whitePrimaryRgba($alpha) {
+  @return rgba(233, 236, 239, $alpha);
+}
+
+@function whiteDarkRgba($alpha) {
+  @return rgba(206, 212, 218, $alpha);
+}
+
+// RED
+@function redPrimaryRgba($alpha) {
+  @return rgba(179, 57, 81, $alpha);
+}
+
+@function redDarkRgba($alpha) {
+  @return rgba(206, 212, 218, $alpha);
+}
