@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Alexander Escobar portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass:dist/css --watch"
+  },
+  "author": "Alexander Escobar",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  },
+  "keywords": []
+}
