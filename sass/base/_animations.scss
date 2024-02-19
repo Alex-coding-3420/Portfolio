@@ -42,3 +42,34 @@
     transform: translateX(0) translateY(5px);
   }
 }
+
+.a-home-p {
+  opacity: 0;
+  &1 {
+    animation: homeP1 5s ease forwards;
+  }
+  &2 {
+    animation: homeP2 5s ease forwards;
+  }
+}
+
+@keyframes homeP1 {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes homeP2 {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

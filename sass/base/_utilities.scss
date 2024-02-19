@@ -4,6 +4,35 @@
   height: 100%;
   margin: 0 auto;
 }
+// TEXT /////////////////////////////////
+.text-align {
+  &-r {
+    text-align: right;
+  }
+  &-l {
+    text-align: left;
+  }
+  &-c {
+    text-align: center;
+  }
+}
+
+// BORDER /////////////////////////////////
+.b {
+  border: 1px solid var(--border-color);
+  &-t {
+    border-top: 1px solid var(--border-color);
+  }
+  &-b {
+    border-bottom: 1px solid var(--border-color);
+  }
+  &-r {
+    border-right: 1px solid var(--border-color);
+  }
+  &-l {
+    border-left: 1px solid var(--border-color);
+  }
+}
 
 // Margin /////////////////////////////////
 .m {

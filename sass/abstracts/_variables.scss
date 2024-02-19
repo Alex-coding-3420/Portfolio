@@ -16,6 +16,8 @@
   // RED
   --red-primary: #b33951;
   --red-dark: #6a041d;
+
+  --border-color: #d2d4d7;
 }
 
 // SIZES FOR MARGIN AND PADDING ///////////////////////////////////////////////
@@ -23,9 +25,13 @@ $sm: 0.5rem;
 $md: 1rem;
 $lg: 1.5rem;
 
-$h1-size: 3rem;
-$h2-size: rem(24px);
-$h3-size: rem(52px);
-$h4-size: rem(18px);
-$p-size: 1rem;
-$list-size: rem(14px);
+$h1-size: clamp(2.25rem, 2.022727272727273rem + 0.9696969696969697vw, 2.75rem);
+$h2-size: clamp(1.25rem, 1.1363636363636365rem + 0.48484848484848486vw, 1.5rem);
+$h3-size: clamp(3.25rem, 2.965909090909091rem + 1.2121212121212122vw, 3.875rem);
+$h4-size: clamp(1rem, 0.9431818181818182rem + 0.24242424242424243vw, 1.125rem);
+$p-size: clamp(1rem, 0.9431818181818182rem + 0.24242424242424243vw, 1.125rem);
+$list-size: clamp(
+  0.75rem,
+  0.6931818181818182rem + 0.24242424242424243vw,
+  0.875rem
+);
