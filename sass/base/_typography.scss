@@ -7,8 +7,9 @@ h1 {
   font-size: $h1-size;
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-size: $h2-size;
+  //   line-height: 0;
 }
 h3 {
   font-size: 3.25rem;
@@ -22,9 +23,17 @@ p {
   font-size: 0.875rem;
   font-size: $p-size;
 }
-// li {
-//   font-size: $list-size;
-// }
+
+.resume-font,
+li {
+  font-size: 0.75rem;
+  font-size: clamp(
+    0.75rem,
+    0.6363636363636364rem + 0.48484848484848486vw,
+    1rem
+  );
+}
+
 .heading-primary {
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -41,6 +50,31 @@ p {
   font-weight: 300;
   letter-spacing: 4px;
   color: var(--yellow-primary);
+}
+
+.heading-secondary {
+  position: relative;
+  width: fit-content;
+  //   line-height: 0;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    @include centerTopLeft;
+    border-radius: 50%;
+  }
+  &::after {
+    height: 5rem;
+    width: 5rem;
+    background-color: #f4e0b1;
+    z-index: -1;
+  }
+  &::before {
+    background-color: #f9f0d8;
+    width: 7rem;
+    height: 7rem;
+    z-index: -2;
+  }
 }
 .heading-tertiary {
   display: inline-block;

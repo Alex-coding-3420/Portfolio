@@ -198,8 +198,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 1.1363636364rem + 0.4848484848vw, 1.5rem);
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.3295454545rem + 0.7272727273vw, 1.875rem);
 }
 
 h3 {
@@ -217,6 +217,12 @@ p {
   font-size: clamp(0.875rem, 0.7613636364rem + 0.4848484848vw, 1.125rem);
 }
 
+.resume-font,
+li {
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.6363636364rem + 0.4848484848vw, 1rem);
+}
+
 .heading-primary {
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -229,6 +235,31 @@ p {
   font-weight: 300;
   letter-spacing: 4px;
   color: var(--yellow-primary);
+}
+
+.heading-secondary {
+  position: relative;
+  width: fit-content;
+}
+.heading-secondary::after, .heading-secondary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.heading-secondary::after {
+  height: 5rem;
+  width: 5rem;
+  background-color: #f4e0b1;
+  z-index: -1;
+}
+.heading-secondary::before {
+  background-color: #f9f0d8;
+  width: 7rem;
+  height: 7rem;
+  z-index: -2;
 }
 
 .heading-tertiary {
@@ -245,6 +276,10 @@ p {
   max-width: 75rem;
   height: 100%;
   margin: 0 auto;
+}
+
+.resume-font-size {
+  font-size: clamp(0.75rem, 0.6931818182rem + 0.2424242424vw, 0.875rem);
 }
 
 .color-yellow {
@@ -385,10 +420,19 @@ p {
 }
 .flex {
   display: flex;
+  width: 100%;
 }
 
-.f-col {
+.f--col {
   flex-direction: column;
+}
+
+.f--wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .j--center {
@@ -422,10 +466,35 @@ p {
   padding-bottom: 5rem;
   padding-bottom: clamp(5rem, 4.5454545455rem + 1.9393939394vw, 6rem);
 }
+.h2-mb {
+  margin-bottom: 5rem;
+  margin-bottom: clamp(5rem, 4.5454545455rem + 1.9393939394vw, 6rem);
+}
 
 .h3-pb {
   padding-bottom: 1.5rem;
   padding-bottom: clamp(1.5rem, 1.2727272727rem + 0.9696969697vw, 2rem);
+}
+
+.h4-pb {
+  padding-bottom: 0.4em;
+}
+
+.sec-pb {
+  padding-bottom: 4rem;
+  padding-bottom: clamp(4rem, 3.5454545455rem + 1.9393939394vw, 5rem);
+}
+.sec-pt {
+  padding-top: 4rem;
+  padding-top: clamp(4rem, 3.5454545455rem + 1.9393939394vw, 5rem);
+}
+.sec-mb {
+  margin-bottom: 4rem;
+  margin-bottom: clamp(4rem, 3.5454545455rem + 1.9393939394vw, 5rem);
+}
+.sec-mt {
+  margin-top: 4rem;
+  margin-top: clamp(4rem, 3.5454545455rem + 1.9393939394vw, 5rem);
 }
 
 .navbar__checkbox {
@@ -560,8 +629,97 @@ p {
   transform: rotate(135deg) scale(0.9);
 }
 
+.about__flex {
+  display: flex;
+  gap: 2rem;
+}
+.about__flex-col--1 {
+  flex: 0 0 33%;
+}
+.about__flex-col--2 {
+  flex: 1;
+}
+
+.resume {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 3px 15px rgba(45, 36, 12, 0.2);
+  background-color: rgba(249, 240, 216, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.resume::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-right: 10px solid var(--yellow-primary);
+  z-index: -1;
+}
+.resume__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 0.5rem;
+}
+.resume__item--edu {
+  grid-row: 1;
+  grid-column: 1/span 2;
+}
+.resume__item--skill {
+  grid-row: 2;
+  grid-column: 1/span 3;
+}
+.resume__item--course {
+  justify-self: end;
+  grid-row: 1;
+  grid-column: 2/span 2;
+}
+.resume__item--course-list {
+  column-count: 2;
+}
+.resume__item--project {
+  grid-row: 3;
+  grid-column: 1/span 3;
+}
+.resume__item--project li {
+  list-style: disc;
+  max-width: 50ch;
+  margin-left: 20px;
+}
+.resume__item--project li:nth-child(odd) {
+  margin-bottom: 0.5rem;
+}
+
 .home {
   height: 100vh;
+}
+
+.about__me {
+  overflow: hidden;
+  background-color: rgba(249, 240, 216, 0.15);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 3px 15px rgba(45, 36, 12, 0.2);
+  position: relative;
+}
+.about__me::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-left: 10px solid var(--yellow-primary);
+  z-index: -1;
+}
+.about__p {
+  hyphens: auto;
+  text-indent: 20px;
+}
+.about__p:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
