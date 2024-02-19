@@ -3,25 +3,6 @@
 }
 
 .about {
-  &__me {
-    overflow: hidden;
-    background-color: yellowLight1Rgba(0.15);
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0px 3px 15px blackPrimaryRgba(0.2);
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      //   background-color: var(--yellow-primary);
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      border-left: 10px solid var(--yellow-primary);
-      z-index: -1;
-    }
-  }
   &__p {
     hyphens: auto;
     text-indent: 20px;

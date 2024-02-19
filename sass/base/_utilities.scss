@@ -220,6 +220,15 @@
 .flex-1 {
   flex: 1;
 }
+.flex-33p {
+  flex: 0 0 33%;
+}
+.flex-66p {
+  flex: 0 0 66%;
+}
+.f--row-reverse {
+  flex-direction: row-reverse;
+}
 
 // Justify Content
 .j {
@@ -253,6 +262,9 @@
     gap: 1.5rem;
   }
   &--3 {
+    gap: 2rem;
+  }
+  &--4 {
     gap: 3rem;
   }
 }

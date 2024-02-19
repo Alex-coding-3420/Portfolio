@@ -68,6 +68,7 @@ li {
     width: 5rem;
     background-color: #f4e0b1;
     z-index: -1;
+    border: 1px solid var(--white-primary);
   }
   &::before {
     background-color: #f9f0d8;

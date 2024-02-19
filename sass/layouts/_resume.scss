@@ -1,22 +1,4 @@
 .resume {
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0px 3px 15px blackPrimaryRgba(0.2);
-  background-color: yellowLight1Rgba(0.15);
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    border-right: 10px solid var(--yellow-primary);
-    z-index: -1;
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -32,7 +14,7 @@
       grid-column: 1 / span 3;
     }
     &--course {
-      justify-self: end;
+      justify-self: center;
       grid-row: 1;
       grid-column: 2 / span 2;
 
