@@ -273,10 +273,10 @@ li {
 }
 
 .container {
-  width: 93%;
   max-width: 75rem;
   height: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .resume-font-size {
