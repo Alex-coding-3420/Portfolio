@@ -39,3 +39,8 @@
 @function redDarkRgba($alpha) {
   @return rgba(206, 212, 218, $alpha);
 }
+
+// BLACK
+@function blackPrimaryRgba($alpha) {
+  @return rgba(45, 36, 12, $alpha);
+}

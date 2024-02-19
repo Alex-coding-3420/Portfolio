@@ -5,7 +5,7 @@
   margin: 0 auto;
 }
 
-// Margin
+// Margin /////////////////////////////////
 .m {
   &--1 {
     margin: $sm;
@@ -77,7 +77,7 @@
   }
 }
 
-// Padding
+// Padding /////////////////////////////////
 .p {
   &--1 {
     padding: $sm;
@@ -146,5 +146,49 @@
   }
   &--4 {
     // padding: ;
+  }
+}
+
+// FLEX /////////////////////////////////
+.flex {
+  display: flex;
+}
+.f-col {
+  flex-direction: column;
+}
+
+// Justify Content
+.j {
+  &--center {
+    justify-content: center;
+  }
+  &--sb {
+    justify-content: space-between;
+  }
+  &--sa {
+    justify-content: space-around;
+  }
+}
+
+// Align Items
+.a {
+  &--center {
+    align-items: center;
+  }
+  &--sb {
+    align-items: space-between;
+  }
+}
+
+// Gap
+.g {
+  &--1 {
+    gap: 1rem;
+  }
+  &--2 {
+    gap: 1.5rem;
+  }
+  &--3 {
+    gap: 3rem;
   }
 }

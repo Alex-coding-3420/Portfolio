@@ -1,0 +1,32 @@
+// Custom border
+.line {
+  position: relative;
+  width: fit-content;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    line-height: 0;
+    background-image: linear-gradient(
+      to right,
+      var(--black-primary) 0%,
+      var(--black-primary) 70%,
+      var(--white-primary) 100%
+    );
+    animation: animateLine 2s 2.5s ease forwards;
+  }
+}
+
+@keyframes animateLine {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}

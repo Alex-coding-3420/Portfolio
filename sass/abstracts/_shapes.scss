@@ -1,0 +1,44 @@
+.shapes {
+}
+
+.shape {
+  display: inline-block;
+
+  height: 1.25rem;
+  width: 1.25rem;
+
+  backface-visibility: hidden;
+}
+
+.a-shape {
+  opacity: 0;
+  animation: animateShape 3s ease infinite;
+
+  &--1 {
+    background-color: yellowPrimaryRgba(0.7);
+  }
+
+  &--2 {
+    background-color: yellowPrimaryRgba(0.7);
+    border-radius: 50%;
+    animation-delay: 1s;
+  }
+  &--3 {
+    border-left: rem(10px) solid transparent;
+    border-right: rem(10px) solid transparent;
+    border-bottom: 1.25rem solid yellowPrimaryRgba(0.7);
+    animation-delay: 2s;
+  }
+}
+
+@keyframes animateShape {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

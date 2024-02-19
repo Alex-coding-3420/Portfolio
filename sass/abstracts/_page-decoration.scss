@@ -1,0 +1,24 @@
+.page-decoration {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 5.5vw;
+    right: 0;
+    background-color: var(--yellow-primary);
+    z-index: -2;
+    background-image: linear-gradient(
+      to right,
+      var(--white-primary) 0%,
+      var(--yellow-primary) 1%,
+      var(--yellow-primary) 70%,
+      var(--white-primary) 70%,
+      var(--white-primary) 75%,
+      var(--yellow-dark) 75%
+    );
+  }
+}

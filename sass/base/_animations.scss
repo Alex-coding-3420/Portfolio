@@ -1,0 +1,44 @@
+.a-heading-primary {
+  animation: animateHeading 5s ease-out forwards;
+  backface-visibility: hidden;
+}
+
+@keyframes animateHeading {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0) translateY(-5px);
+  }
+}
+
+.a-home__secondary {
+  animation: animateTextSecondary 5s ease-out forwards;
+  backface-visibility: hidden;
+}
+@keyframes animateTextSecondary {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0) translateY(5px);
+  }
+}
