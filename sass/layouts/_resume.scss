@@ -46,4 +46,7 @@
   .resume__item--course {
     justify-self: end;
   }
+  .resume__item--edu .section__flex {
+    gap: 0.5rem;
+  }
 }
