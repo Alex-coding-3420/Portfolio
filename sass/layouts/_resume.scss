@@ -37,3 +37,13 @@
     }
   }
 }
+
+@media screen and (max-width: rem(900px)) {
+  .resume__item--project .flex {
+    flex-direction: column;
+  }
+
+  .resume__item--course {
+    justify-self: end;
+  }
+}

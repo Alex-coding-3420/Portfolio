@@ -11,3 +11,10 @@
     flex: 1;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .section__flex {
+    display: flex;
+    flex-direction: column;
+  }
+}

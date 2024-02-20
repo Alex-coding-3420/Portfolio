@@ -122,3 +122,24 @@
     }
   }
 }
+
+@media screen and (max-width: rem(900px)) {
+  .projects {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 97%;
+      gap: 0.75rem;
+    }
+  }
+}
+@media screen and (max-width: rem(500px)) {
+  .projects {
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 97%;
+      gap: 0.75rem;
+    }
+  }
+}
